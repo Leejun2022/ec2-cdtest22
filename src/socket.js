@@ -29,6 +29,7 @@ module.exports = (server) => {
     socket.on("error", (error) => {
       console.error(error);
     });
+    
 
     //메인페이지 연결시
     socket.on("main_connect", (userKey) => {
