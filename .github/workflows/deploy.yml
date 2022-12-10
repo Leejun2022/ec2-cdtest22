@@ -25,6 +25,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: create env file
+        working-directory: ./src/
+        run: |
+          touch .env
+          cat << EOF >> .env
+          ${{ secrets.ENV }}
+
       - name: build client files
         working-directory: ./
         run: |
