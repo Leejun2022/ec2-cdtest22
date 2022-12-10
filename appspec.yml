@@ -4,6 +4,14 @@ files:
   - source: /
     destination: /home/ubuntu/sparta/project2
     overwrite: yes
+jobs:
+  steps:
+    - name: create env file
+        working-directory: ./src/
+        run: |
+          touch .env
+          cat << EOF >> .env
+          ${{ secrets.ENV }}
 
 permissions:
   - object: /home/ubuntu
