@@ -1,6 +1,5 @@
 #!/bin/bash
-REPOSITORY=/home/ubuntu/sparta/project2/src
-
+REPOSITORY=/home/ubuntu/sparta/project/src
 
 cd $REPOSITORY
 
